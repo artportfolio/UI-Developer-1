@@ -9,31 +9,24 @@
 
 html {
   font-size: 62.5%;
+  background-color: lemonchiffon;
   // Check breakpoints:
   // @media @tablet {
   //   background-color: lemonchiffon;
   // }
-  // @media @mobile {
-  //   background-color: coral;
-  // }
+  @media @desktop {
+    background-color: coral;
+  }
 }
 
 body {
   font-family: "Varela Round", sans-serif;
-  font-size: 5rem;
-  //color:;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  font-size: 1rem;
+  color: @yellow;
 }
 
 h1 {
-  //font-size: rem;
+  font-size: 10rem;
 }
 
 h2 {
@@ -49,12 +42,17 @@ p {
   //line-height: 1;
 }
 
-// .<main div name here> {
-//   max-width: 800px;
-//   width: 100%;
-//   margin: 0 auto;
-//   //margin-top: 103px; // fixed nav - not ideal, since a change in nav height would require a change here
-// }
+a {
+  .link-styles;
+}
+
+.container {
+  max-width: 1000px;
+  width: 98%;
+  margin: 0 auto;
+  background-color: @grey;
+  //margin-top: 103px; // fixed nav - not ideal, since a change in nav height would require a change here
+}
 
 header {
   //max-width: px;
