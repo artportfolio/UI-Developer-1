@@ -1,8 +1,8 @@
 // Mixins
 
-.link-style() {
+.link-styles() {
+  // Style all links here
   text-decoration: none;
-  color: black;
 }
 
 .flex-sb() {
@@ -24,9 +24,7 @@
   background-color: @bcolor;
   color: @fcolor;
   cursor: pointer;
-  border: 1px solid black;
-  font-size: 1rem;
-  font-weight: normal;
+  border: 1px solid @greyShade;
   padding: 10px 20px;
   border-radius: 6px;
   &:hover {
