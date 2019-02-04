@@ -152,8 +152,18 @@ body {
 h1 {
   font-size: 9rem;
 }
+p {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 5px;
+  text-align: justify;
+  text-justify: inter-word;
+}
 a {
   text-decoration: none;
+}
+img {
+  width: 98%;
 }
 .container {
   max-width: 1000px;
@@ -215,4 +225,19 @@ nav {
 .nav-link:hover {
   background-color: #fffca3;
   color: #40627c;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.variety {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
