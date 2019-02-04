@@ -1,0 +1,36 @@
+// Mixins
+
+.link-style() {
+  text-decoration: none;
+  color: black;
+}
+
+.flex-sb() {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-sa() {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-c() {
+  display: flex;
+  justify-content: center;
+}
+
+.button-styler(@bcolor, @fcolor) {
+  background-color: @bcolor;
+  color: @fcolor;
+  cursor: pointer;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 10px 20px;
+  border-radius: 6px;
+  &:hover {
+    background-color: @fcolor;
+    color: @bcolor;
+  }
+}
