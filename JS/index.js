@@ -28,11 +28,11 @@ class TabLink {
     tabElement.addEventListener("click", () => this.selectTab());
   }
   selectTab() {
-    // GSAP: Fades all tabs (and thereby the active tab) to inactive
+    // GSAP: Changes all tabs (and thereby the active tab) to inactive instantly
     tabs.forEach(tab =>
-      TweenMax.to(tab, 0.3, { backgroundColor: "#263b4a", color: "#bdba79" })
+      TweenMax.to(tab, 0, { backgroundColor: "#263b4a", color: "#bdba79" })
     );
-    // GSAP: Hides previously active card
+    // GSAP: Hides previously active card instantly
     cards.forEach(card =>
       TweenMax.to(card, 0, { display: "none", opacity: 0 })
     );
@@ -42,6 +42,10 @@ class TabLink {
       color: "#fffca3"
     });
     TweenMax.to(this.card, 0.3, { display: "block", opacity: 1 });
+    // Rounds upper-left corner of feature cards 2 and 3:
+    if (this.tabData === `feature 2` || this.tabData === `feature 3`) {
+      TweenMax.to(this.card, 0.3, { borderTopLeftRadius: "6px" });
+    }
   }
 }
 

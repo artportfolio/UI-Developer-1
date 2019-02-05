@@ -52,7 +52,6 @@ p {
 
 .features-container {
   width: 100%;
-  background-color: @greyShade;
 }
 
 .features-tabs {
@@ -66,8 +65,12 @@ p {
   background-color: @blueShade;
   color: @yellowShade;
   padding: 8px 10px 6px 10px;
-  margin: 5px 0 0 5px;
+  margin: 5px 5px 0 0;
+  // (1 of 2) Outlines tab and card together so they look like one object.
   border-radius: 6px 6px 0 0;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: @greyShade;
 }
 
 .features-cards {
@@ -77,15 +80,12 @@ p {
 .feature-card {
   display: none;
   padding: 5px;
-  margin: 0 5px;
   font-family: "Varela Round", sans-serif;
   background-color: @blueTint;
   color: @yellow;
+  // (2 of 2) Outlines tab and card together so they look like one object.
   border-radius: 0 6px 6px 6px;
-}
-
-// Rounds upper-left corner of feature cards 2 and 3:
-[data-card="feature 2"],
-[data-card="feature 3"] {
-  border-radius: 6px;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: @greyShade;
 }
