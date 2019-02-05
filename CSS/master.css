@@ -292,9 +292,6 @@ p {
 }
 .feature-card {
   display: none;
-}
-.active-card {
-  display: block;
   padding: 5px;
   margin: 0 5px;
   background-color: #679ec7;
