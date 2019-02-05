@@ -1,47 +1,77 @@
 // header styles
 
+.nav {
+  margin: 5px 0 2.5px 0;
+  width: 100%;
+}
+
 nav {
   .flex-sb;
-  //padding: 2.5px;
+  width: 100%;
 }
 
 .side-nav {
-  padding-right: 5px;
   width: 33.3%;
   display: flex;
   flex-direction: column;
+}
+
+// link buttons:
+.palette-div {
+  height: 6rem;
+  width: 6rem;
+}
+
+#palette-yellow,
+#palette-blue {
+  position: relative;
+  bottom: 3px;
+  border: none;
   @media @desktop {
   }
 }
 
-// link buttons:
+#palette-blue {
+  display: none;
+  :hover {
+    display: block;
+  }
+}
+
 .logo {
-  .button-styler(@blue, @yellowTint);
-  color: red; // breakpoint test (remove later)
+  .button-styler(@blue, @yellow);
+  :hover {
+    #palette-yellow {
+      display: none;
+    }
+    #palette-blue {
+      display: block;
+    }
+  }
   margin: 2.5px 0;
-  font-size: 16.5vmin;
-  padding-top: 18px;
-  padding-left: 30px;
+  font-size: 15.5vmin;
+  padding-top: 16px;
+  padding-left: 20px;
   width: 66.6%;
   display: flex;
   justify-content: left;
   align-items: center;
   @media @desktop {
-    color: @yellowTint; // breakpoint test (remove later)
+    padding: 10px 0 0 25px;
     font-size: 8.5rem;
   }
 }
 
 .nav-link {
-  .button-styler(@blue, @yellowTint);
-  margin: 2.5px;
+  .button-styler(@blue, @yellow);
+  margin: 2.5px 0 2.5px 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3.6vmin;
   height: 50%;
   text-align: center;
-  width: 100%;
+  width: 98%;
   @media @desktop {
     font-size: 2.15rem;
   }

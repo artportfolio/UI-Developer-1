@@ -7,39 +7,55 @@
   border-radius: 6px;
 }
 
-.welcome {
+.hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.welcome-1 {
   position: relative;
-}
-
-.welcome-text {
-  margin: 10px 0 0 0;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.login {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  bottom: 3px;
-  right: 5px;
-  padding-right: 5px;
-  border-radius: 6px;
+.slideshow-div {
 }
 
-.login-background {
-  background-color: @yellowTint;
-  opacity: 0.5;
+.slideshow-img {
+  display: none;
 }
-.login-foreground {
-  color: @blueShade;
+
+.slideshow-img-active {
+  display: block;
+}
+
+.CTA {
+  width: 90%;
+  height: 25%;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  border-radius: 6px 0 0 6px;
+}
+
+.CTA-background {
+  background-color: @yellowTint;
+  opacity: 0.85;
+}
+.CTA-foreground {
+  padding: 5px;
+  font-size: 3.6vmin;
+  color: @greyShade;
+}
+
+#CTA-btn {
+  .button-styler(@blue, @yellow);
+  margin: 10px 0 2px 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  text-align: center;
+  width: 45%;
+  @media @desktop {
+    font-size: 2.15rem;
+  }
 }
 
 h2 {
@@ -66,7 +82,7 @@ p {
   top: 1px;
   cursor: pointer;
   font-family: "Varela Round", sans-serif;
-  background-color: @blueShade;
+  background-color: @blue;
   color: @yellowShade;
   padding: 8px 10px 6px 10px;
   margin: 5px 5px 0 0;
@@ -95,5 +111,6 @@ p {
 }
 
 .feature-image {
+  // Allows for the fade-in effect of the active feature image
   opacity: 0;
 }
