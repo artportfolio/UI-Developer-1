@@ -141,7 +141,7 @@ html {
 body {
   font-family: "Varela Round", sans-serif;
   font-size: 1rem;
-  background-color: #26393d;
+  background-color: white;
   color: #e8e595;
 }
 h2 {
@@ -164,7 +164,7 @@ img {
   max-width: 1000px;
   width: 98%;
   margin: 0 auto;
-  background-color: #26393d;
+  background-color: white;
 }
 header {
   width: 100%;
@@ -241,6 +241,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 6px;
 }
 .welcome {
   display: flex;
@@ -281,12 +282,15 @@ p {
 }
 .features-container {
   width: 100%;
+  border-radius: 6px;
 }
 .features-tabs {
   display: flex;
   font-size: 1.6rem;
 }
 .feature-tab {
+  position: relative;
+  top: 1px;
   cursor: pointer;
   font-family: "Varela Round", sans-serif;
   background-color: #263b4a;
@@ -308,7 +312,10 @@ p {
   background-color: #679ec7;
   color: #e8e595;
   border-radius: 0 6px 6px 6px;
-  border-width: 0 1px 1px 1px;
+  border-width: 1px 1px 1px 1px;
   border-style: solid;
   border-color: #080c0d;
+}
+.feature-image {
+  opacity: 0;
 }
