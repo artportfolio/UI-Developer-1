@@ -9,40 +9,30 @@
 
 html {
   font-size: 62.5%;
-  background-color: lemonchiffon;
   // Check breakpoints:
   // @media @tablet {
   //   background-color: lemonchiffon;
   // }
-  @media @desktop {
-    background-color: coral;
-  }
+  // @media @desktop {
+  //   background-color: coral;
+  // }
 }
 
 body {
   font-family: "Varela Round", sans-serif;
   font-size: 1rem;
+  background-color: white;
   color: @yellow;
 }
 
-h1 {
-  font-size: 9rem;
-}
-
 h2 {
-  //font-size: rem;
-}
-
-h3 {
-  //font-size: rem;
+  font-size: 2rem;
 }
 
 p {
   font-size: 1.6rem;
   line-height: 1.2;
-  padding: 5px;
-  text-align: justify;
-  text-justify: inter-word;
+  width: 98%;
 }
 
 a {
@@ -50,20 +40,26 @@ a {
 }
 
 img {
-  width: 98%;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid @greyShade;
 }
 
 .container {
   max-width: 1000px;
-  min-width: 490px;
   width: 98%;
   margin: 0 auto;
-  background-color: @grey;
+  background-color: white;
   //margin-top: 103px; // fixed nav - not ideal, since a change in nav height would require a change here
 }
 
 header {
-  //max-width: px;
   width: 100%;
   margin: 0 auto;
+}
+
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: @grey;
 }

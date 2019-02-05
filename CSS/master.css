@@ -137,49 +137,47 @@ table {
 }
 html {
   font-size: 62.5%;
-  background-color: lemonchiffon;
-}
-@media (min-width: 500px) {
-  html {
-    background-color: coral;
-  }
 }
 body {
   font-family: "Varela Round", sans-serif;
   font-size: 1rem;
+  background-color: white;
   color: #e8e595;
 }
-h1 {
-  font-size: 9rem;
+h2 {
+  font-size: 2rem;
 }
 p {
   font-size: 1.6rem;
   line-height: 1.2;
-  padding: 5px;
-  text-align: justify;
-  text-justify: inter-word;
+  width: 98%;
 }
 a {
   text-decoration: none;
 }
 img {
-  width: 98%;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #080c0d;
 }
 .container {
   max-width: 1000px;
-  min-width: 490px;
   width: 98%;
   margin: 0 auto;
-  background-color: #26393d;
+  background-color: white;
 }
 header {
   width: 100%;
   margin: 0 auto;
 }
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #26393d;
+}
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 2.5px;
 }
 .side-nav {
   padding-right: 5px;
@@ -194,7 +192,9 @@ nav {
   border: 1px solid #080c0d;
   padding: 10px 20px;
   border-radius: 6px;
-  margin: 2.5px;
+  color: red;
+  margin: 2.5px 0;
+  font-size: 16.5vmin;
   padding-top: 18px;
   padding-left: 30px;
   width: 66.6%;
@@ -205,6 +205,12 @@ nav {
 .logo:hover {
   background-color: #fffca3;
   color: #40627c;
+}
+@media (min-width: 500px) {
+  .logo {
+    color: #fffca3;
+    font-size: 8.5rem;
+  }
 }
 .nav-link {
   background-color: #40627c;
@@ -217,7 +223,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.25rem;
+  font-size: 3.6vmin;
   height: 50%;
   text-align: center;
   width: 100%;
@@ -226,18 +232,90 @@ nav {
   background-color: #fffca3;
   color: #40627c;
 }
+@media (min-width: 500px) {
+  .nav-link {
+    font-size: 2.15rem;
+  }
+}
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 6px;
 }
 .welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.variety {
+.welcome-1 {
+  position: relative;
+}
+.welcome-text {
+  margin: 10px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.login {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  padding-right: 5px;
+  border-radius: 6px;
+}
+.login-background {
+  background-color: #fffca3;
+  opacity: 0.5;
+}
+.login-foreground {
+  color: #263b4a;
+}
+h2 {
+  align-self: left;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+.features-container {
+  width: 100%;
+  border-radius: 6px;
+}
+.features-tabs {
+  display: flex;
+  font-size: 1.6rem;
+}
+.feature-tab {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+  font-family: "Varela Round", sans-serif;
+  background-color: #263b4a;
+  color: #bdba79;
+  padding: 8px 10px 6px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px 6px 0 0;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #080c0d;
+}
+.features-cards {
+  background-color: #263b4a;
+}
+.feature-card {
+  display: none;
+  padding: 5px;
+  font-family: "Varela Round", sans-serif;
+  background-color: #679ec7;
+  color: #e8e595;
+  border-radius: 0 6px 6px 6px;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #080c0d;
+}
+.feature-image {
+  opacity: 0;
 }

@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 6px;
 }
 
 .welcome {
@@ -12,8 +13,87 @@
   align-items: center;
 }
 
-.variety {
+.welcome-1 {
+  position: relative;
+}
+
+.welcome-text {
+  margin: 10px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.login {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  padding-right: 5px;
+  border-radius: 6px;
+}
+
+.login-background {
+  background-color: @yellowTint;
+  opacity: 0.5;
+}
+.login-foreground {
+  color: @blueShade;
+}
+
+h2 {
+  align-self: left;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.features-container {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.features-tabs {
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.feature-tab {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+  font-family: "Varela Round", sans-serif;
+  background-color: @blueShade;
+  color: @yellowShade;
+  padding: 8px 10px 6px 10px;
+  margin: 5px 5px 0 0;
+  // (1 of 2) Outlines tab and card together so they look like one object.
+  border-radius: 6px 6px 0 0;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: @greyShade;
+}
+
+.features-cards {
+  background-color: @blueShade;
+}
+
+.feature-card {
+  display: none;
+  padding: 5px;
+  font-family: "Varela Round", sans-serif;
+  background-color: @blueTint;
+  color: @yellow;
+  // (2 of 2) Outlines tab and card together so they look like one object.
+  border-radius: 0 6px 6px 6px;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: @greyShade;
+}
+
+.feature-image {
+  opacity: 0;
 }

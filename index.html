@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Artful - Home</title>
     <link href="CSS/master.css" rel="stylesheet" />
+    <script defer="defer" src="./GSAP/TweenMax.min.js"></script>
     <script defer src="JS/index.js"></script>
   </head>
 
@@ -17,7 +18,7 @@
             <nav>
               <a class="logo" href="/index.html"><h1>Artful</h1></a>
               <div class="side-nav">
-                <a class="nav-link" href="/features.html">Features</a>
+                <a class="nav-link" href="#features">Features</a>
                 <a class="nav-link" href="/join.html">Join Artful</a>
               </div>
             </nav>
@@ -25,31 +26,110 @@
         </div>
       </header>
       <div class="main-content">
-        <div class="welcome">
+        <div class="welcome welcome-1">
           <img src="/img/portrait.jpg" alt="portrait of a woman" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa eum
-            impedit at iure totam enim, explicabo reiciendis accusantium! Itaque
-            impedit veritatis qui quidem laborum facilis beatae iure architecto
-            asperiores perferendis.
-          </p>
+          <!-- tranparent background for login / signup -->
+          <div class="login login-background"></div>
+          <div class="login login-foreground">
+            <h2>Join Artful</h2>
+            <form action="" method="get" class="form">
+              <div class="form">
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="form">
+                <label for="password">Password: </label>
+                <input type="text" password="password" id="password" required />
+              </div>
+              <div class="form">
+                <input type="submit" value="login / signup" />
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="variety">
+        <div id="features" class="features-container">
+          <div class="features-tabs">
+            <div data-tab="feature 1" class="feature-tab active-tab">
+              Feature 1
+            </div>
+            <div data-tab="feature 2" class="feature-tab">Feature 2</div>
+            <div data-tab="feature 3" class="feature-tab">Feature 3</div>
+          </div>
+          <div class="features-cards">
+            <div data-card="feature 1" class="feature-card active-card">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae obcaecati iure architecto doloremque illo quae
+                impedit, corporis laboriosam mollitia porro? Accusamus atque in
+                eum soluta id, eaque consectetur? Provident, nihil?
+              </p>
+              <div class="img-container">
+                <img
+                  data-image="feature 1"
+                  class="feature-image"
+                  src="./img/feature1.jpg"
+                  alt="mountain landscape"
+                />
+              </div>
+            </div>
+            <div data-card="feature 2" class="feature-card">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae obcaecati iure architecto doloremque illo quae
+                impedit, corporis laboriosam mollitia porro? Accusamus atque in
+                eum soluta id, eaque consectetur? Provident, nihil?
+              </p>
+              <div class="img-container">
+                <img
+                  data-image="feature 2"
+                  class="feature-image"
+                  src="./img/feature2.jpg"
+                  alt="dense metropolis"
+                />
+              </div>
+            </div>
+            <div data-card="feature 3" class="feature-card">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae obcaecati iure architecto doloremque illo quae
+                impedit, corporis laboriosam mollitia porro? Accusamus atque in
+                eum soluta id, eaque consectetur? Provident, nihil?
+              </p>
+              <div class="img-container">
+                <img
+                  data-image="feature 3"
+                  class="feature-image"
+                  src="./img/feature3.jpg"
+                  alt="blueprints"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="welcome welcome-2">
           <img src="img/aurora.jpg" alt="aurora borealis" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            incidunt possimus atque dolores veniam dicta iste magnam ipsam quae
-            odit eius fugiat unde numquam voluptatibus nam, eaque deleniti sit
-            optio?
-          </p>
+          <div class="welcome-text">
+            <h2>Limitless</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              obcaecati iure architecto doloremque illo quae impedit, corporis
+              laboriosam mollitia porro? Accusamus atque in eum soluta id, eaque
+              consectetur? Provident, nihil?
+            </p>
+          </div>
         </div>
-        <div class="variety">
+        <div class="welcome welcome-3">
           <img src="img/vase.jpg" alt="green transparent vase" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            repellat quia ea distinctio nihil aperiam modi tenetur. Ut amet hic
-            error mollitia! Magni unde quidem tenetur ipsa repellat amet. Dolor?
-          </p>
+          <div class="welcome-text">
+            <h2>Enshrine</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              repellat quia eveniet quod soluta tempore eaque ea distinctio
+              nihil aperiam modi tenetur. Ut amet hic error mollitia! Magni unde
+              recusandae repellat temporibus beatae quidem tenetur ipsa repellat
+              amet. Dolor?
+            </p>
+          </div>
         </div>
       </div>
       <footer></footer>
