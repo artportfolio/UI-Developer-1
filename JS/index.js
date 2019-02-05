@@ -36,7 +36,7 @@ class TabLink {
     // GSAP: Changes all tabs (and thereby the active tab) to inactive instantly
     tabs.forEach(tab =>
       TweenMax.to(tab, 0, {
-        backgroundColor: "#263b4a",
+        backgroundColor: "#40627c",
         color: "#bdba79",
         borderBottom: "1px solid #080c0d"
       })
@@ -53,10 +53,6 @@ class TabLink {
       borderBottom: "none"
     });
     TweenMax.to(this.card, 0, { display: "block", opacity: 1 });
-    // Rounds upper-left corner of feature cards 2 and 3:
-    if (this.tabData === `feature 2` || this.tabData === `feature 3`) {
-      TweenMax.to(this.card, 0.3, { borderTopLeftRadius: "6px" });
-    }
     // Fades in image on active tab
     TweenMax.to(this.image, 0.5, { opacity: 1 });
   }
