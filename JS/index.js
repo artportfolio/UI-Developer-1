@@ -19,27 +19,28 @@
 class TabLink {
   constructor(tabElement) {
     this.tabElement = tabElement;
-    // matches active card to active tab:
+    // Matches active card to active tab:
     this.tabData = this.tabElement.dataset.tab;
     this.card = document.querySelector(
-      `.feature-card[data-tab="${this.tabData}"]`
+      `.feature-card[data-card="${this.tabData}"]`
     );
-    // Applies styles to features tab/card that is active by default:
-    this.tabElement.style.backgroundColor = "263b4a";
-    this.tabElement.style.color = "fffca3";
-    this.card.style.display = "block";
-
+    // Applies "click" event listener to all tabs:
     tabElement.addEventListener("click", () => this.selectTab());
   }
   selectTab() {
     // GSAP: Fades all tabs (and thereby the active tab) to inactive
-    tabs.forEach(tab => TweenMax.to(tab, 0.3, { backgroundColor: "#263b4a" }));
+    tabs.forEach(tab =>
+      TweenMax.to(tab, 0.3, { backgroundColor: "#263b4a", color: "#bdba79" })
+    );
     // GSAP: Hides previously active card
     cards.forEach(card =>
       TweenMax.to(card, 0, { display: "none", opacity: 0 })
     );
     // GSAP: Fades in active tab/card
-    TweenMax.to(this.tabElement, 0.3, { backgroundColor: "#679ec7" });
+    TweenMax.to(this.tabElement, 0.3, {
+      backgroundColor: "#679ec7",
+      color: "#fffca3"
+    });
     TweenMax.to(this.card, 0.3, { display: "block", opacity: 1 });
   }
 }
@@ -47,3 +48,8 @@ class TabLink {
 const tabs = document.querySelectorAll(".feature-tab");
 const cards = document.querySelectorAll(".feature-card");
 tabs.forEach(tabElement => new TabLink(tabElement));
+
+// Applies styles to features tab/card that is active by default:
+tabs[0].style.backgroundColor = "#679ec7";
+tabs[0].style.color = "#fffca3";
+cards[0].style.display = "block";

@@ -17,13 +17,20 @@ nav {
 // link buttons:
 .logo {
   .button-styler(@blue, @yellowTint);
+  color: red; // breakpoint test (remove later)
   margin: 2.5px;
+  font-size: 16.5vmin;
   padding-top: 18px;
   padding-left: 30px;
   width: 66.6%;
   display: flex;
   justify-content: left;
   align-items: center;
+  @media @desktop {
+    color: @yellowTint; // breakpoint test (remove later)
+    font-size: 8.5rem;
+    width: 66.6%;
+  }
 }
 
 .nav-link {
@@ -32,8 +39,11 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.25rem;
+  font-size: 3.6vmin;
   height: 50%;
   text-align: center;
   width: 100%;
+  @media @desktop {
+    font-size: 2.15rem;
+  }
 }
