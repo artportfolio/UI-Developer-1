@@ -24,22 +24,37 @@
   align-items: center;
 }
 
-.login {
-  width: 200px;
-  height: 200px;
+.CTA {
+  width: 90%;
+  height: 25%;
   position: absolute;
-  bottom: 3px;
-  right: 5px;
-  padding-right: 5px;
-  border-radius: 6px;
+  bottom: 10%;
+  right: 0;
+  border-radius: 6px 0 0 6px;
 }
 
-.login-background {
+.CTA-background {
   background-color: @yellowTint;
-  opacity: 0.5;
+  opacity: 0.75;
 }
-.login-foreground {
-  color: @blueShade;
+.CTA-foreground {
+  padding: 5px;
+  font-size: 3.6vmin;
+  color: @greyShade;
+}
+
+#CTA-btn {
+  .button-styler(@blue, @yellow);
+  margin: 9px 0 2px 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  text-align: center;
+  width: 45%;
+  @media @desktop {
+    font-size: 2.15rem;
+  }
 }
 
 h2 {
@@ -95,5 +110,6 @@ p {
 }
 
 .feature-image {
+  // Allows for the fade-in effect of the active feature image
   opacity: 0;
 }

@@ -147,6 +147,9 @@ body {
 h2 {
   font-size: 2rem;
 }
+h3 {
+  font-size: 1.8rem;
+}
 p {
   font-size: 1.6rem;
   line-height: 1.2;
@@ -191,12 +194,11 @@ nav {
 }
 .logo {
   background-color: #40627c;
-  color: #fffca3;
+  color: #e8e595;
   cursor: pointer;
   border: 1px solid #080c0d;
   padding: 10px 20px;
   border-radius: 6px;
-  color: red;
   margin: 2.5px 0;
   font-size: 16.5vmin;
   padding-top: 18px;
@@ -207,18 +209,17 @@ nav {
   align-items: center;
 }
 .logo:hover {
-  background-color: #fffca3;
+  background-color: #e8e595;
   color: #40627c;
 }
 @media (min-width: 500px) {
   .logo {
-    color: #fffca3;
     font-size: 8.5rem;
   }
 }
 .nav-link {
   background-color: #40627c;
-  color: #fffca3;
+  color: #e8e595;
   cursor: pointer;
   border: 1px solid #080c0d;
   padding: 10px 20px;
@@ -233,7 +234,7 @@ nav {
   width: 98%;
 }
 .nav-link:hover {
-  background-color: #fffca3;
+  background-color: #e8e595;
   color: #40627c;
 }
 @media (min-width: 500px) {
@@ -251,6 +252,7 @@ footer .footer {
   margin: 5px 0;
 }
 footer p {
+  color: #bdba79;
   margin: 20px 0;
   display: flex;
   width: auto;
@@ -275,21 +277,46 @@ footer p {
   flex-direction: column;
   align-items: center;
 }
-.login {
-  width: 200px;
-  height: 200px;
+.CTA {
+  width: 90%;
+  height: 25%;
   position: absolute;
-  bottom: 3px;
-  right: 5px;
-  padding-right: 5px;
-  border-radius: 6px;
+  bottom: 10%;
+  right: 0;
+  border-radius: 6px 0 0 6px;
 }
-.login-background {
+.CTA-background {
   background-color: #fffca3;
-  opacity: 0.5;
+  opacity: 0.75;
 }
-.login-foreground {
-  color: #263b4a;
+.CTA-foreground {
+  padding: 5px;
+  font-size: 3.6vmin;
+  color: #080c0d;
+}
+#CTA-btn {
+  background-color: #40627c;
+  color: #e8e595;
+  cursor: pointer;
+  border: 1px solid #080c0d;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 9px 0 2px 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  text-align: center;
+  width: 45%;
+}
+#CTA-btn:hover {
+  background-color: #e8e595;
+  color: #40627c;
+}
+@media (min-width: 500px) {
+  #CTA-btn {
+    font-size: 2.15rem;
+  }
 }
 h2 {
   align-self: left;
