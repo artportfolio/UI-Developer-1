@@ -192,6 +192,22 @@ nav {
   display: flex;
   flex-direction: column;
 }
+.palette-div {
+  height: 6rem;
+  width: 6rem;
+}
+#palette-yellow,
+#palette-blue {
+  position: relative;
+  bottom: 3px;
+  border: none;
+}
+#palette-blue {
+  display: none;
+}
+#palette-blue :hover {
+  display: block;
+}
 .logo {
   background-color: #40627c;
   color: #e8e595;
@@ -200,9 +216,9 @@ nav {
   padding: 10px 20px;
   border-radius: 6px;
   margin: 2.5px 0;
-  font-size: 16.5vmin;
-  padding-top: 18px;
-  padding-left: 30px;
+  font-size: 15.5vmin;
+  padding-top: 16px;
+  padding-left: 20px;
   width: 66.6%;
   display: flex;
   justify-content: left;
@@ -212,8 +228,15 @@ nav {
   background-color: #e8e595;
   color: #40627c;
 }
-@media (min-width: 500px) {
+.logo :hover #palette-yellow {
+  display: none;
+}
+.logo :hover #palette-blue {
+  display: block;
+}
+@media (min-width: 550px) {
   .logo {
+    padding: 10px 0 0 25px;
     font-size: 8.5rem;
   }
 }
@@ -237,7 +260,7 @@ nav {
   background-color: #e8e595;
   color: #40627c;
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   .nav-link {
     font-size: 2.15rem;
   }
@@ -263,31 +286,29 @@ footer p {
   align-items: center;
   border-radius: 6px;
 }
-.welcome {
+.hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.welcome-1 {
   position: relative;
-}
-.welcome-text {
-  margin: 10px 0 0 0;
-  display: flex;
   flex-direction: column;
   align-items: center;
+}
+.slideshow-img {
+  display: none;
+}
+.slideshow-img-active {
+  display: block;
 }
 .CTA {
   width: 90%;
   height: 25%;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   right: 0;
   border-radius: 6px 0 0 6px;
 }
 .CTA-background {
   background-color: #fffca3;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 .CTA-foreground {
   padding: 5px;
@@ -301,7 +322,7 @@ footer p {
   border: 1px solid #080c0d;
   padding: 10px 20px;
   border-radius: 6px;
-  margin: 9px 0 2px 2.5px;
+  margin: 10px 0 2px 2.5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,7 +334,7 @@ footer p {
   background-color: #e8e595;
   color: #40627c;
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   #CTA-btn {
     font-size: 2.15rem;
   }
