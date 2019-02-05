@@ -9,19 +9,19 @@
 
 html {
   font-size: 62.5%;
-  background-color: lemonchiffon;
   // Check breakpoints:
   // @media @tablet {
   //   background-color: lemonchiffon;
   // }
-  @media @desktop {
-    background-color: coral;
-  }
+  // @media @desktop {
+  //   background-color: coral;
+  // }
 }
 
 body {
   font-family: "Varela Round", sans-serif;
   font-size: 1rem;
+  background-color: @grey;
   color: @yellow;
 }
 
@@ -48,7 +48,7 @@ a {
 }
 
 img {
-  width: 98%;
+  width: 100%;
 }
 
 .container {
@@ -61,7 +61,14 @@ img {
 }
 
 header {
-  //max-width: px;
   width: 100%;
   margin: 0 auto;
+}
+
+.main-content {
+  max-width: 1000px;
+  min-width: 490px;
+  width: 98%;
+  margin: 0 auto;
+  background-color: @grey;
 }
