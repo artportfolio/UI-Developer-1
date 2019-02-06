@@ -192,15 +192,20 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.palette-div {
-  height: 6rem;
-  width: 6rem;
-}
 #palette-yellow,
 #palette-blue {
   position: relative;
   bottom: 3px;
   border: none;
+  width: 44px;
+  height: 44px;
+}
+@media (min-width: 550px) {
+  #palette-yellow,
+  #palette-blue {
+    width: 55px;
+    height: 55px;
+  }
 }
 #palette-blue {
   display: none;
@@ -269,7 +274,7 @@ footer .footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #263b4a;
+  background-color: #40627c;
   border-radius: 6px;
   border: 1px solid #080c0d;
   margin: 5px 0;
@@ -292,6 +297,9 @@ footer p {
   flex-direction: column;
   align-items: center;
 }
+.slide-div {
+  display: block;
+}
 .slide-img {
   display: none;
 }
@@ -300,20 +308,29 @@ footer p {
 }
 .CTA {
   width: 90%;
-  height: 25%;
+  height: 21%;
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   right: 0;
   border-radius: 6px 0 0 6px;
+  border: 1px solid #080c0d;
 }
 .CTA-background {
   background-color: #fffca3;
   opacity: 0.85;
 }
 .CTA-foreground {
-  padding: 5px;
-  font-size: 3.6vmin;
+  padding: 1.5% 0 1% 2%;
   color: #080c0d;
+}
+.CTA-foreground p {
+  font-size: 4.75vw;
+  text-align: left;
+}
+@media (min-width: 1000px) {
+  .CTA-foreground p {
+    font-size: 49px;
+  }
 }
 #CTA-btn {
   background-color: #40627c;
@@ -322,21 +339,23 @@ footer p {
   border: 1px solid #080c0d;
   padding: 10px 20px;
   border-radius: 6px;
-  margin: 10px 0 2px 2.5px;
+  margin: 1% 0;
+  padding: 1% 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5vmin;
+  font-size: 5vw;
   text-align: center;
   width: 45%;
+  height: 33%;
 }
 #CTA-btn:hover {
   background-color: #e8e595;
   color: #40627c;
 }
-@media (min-width: 550px) {
+@media (min-width: 1000px) {
   #CTA-btn {
-    font-size: 2.15rem;
+    font-size: 53px;
   }
 }
 h2 {
