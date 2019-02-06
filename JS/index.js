@@ -13,6 +13,7 @@
 // @greyShade: #080c0d;
 
 // Slideshow
+// Component: Additional images can easily be added
 
 const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
 let slideImgActive = slideImgs[0];
@@ -32,9 +33,10 @@ const slide = () => {
   slideImgActive.classList.add("slide-img-active");
 };
 
-const autoSlideshow = setInterval(slide, 3000);
+const autoSlideshow = setInterval(slide, 2500);
 
 // Features tabs/cards
+// Component: additional feature tabs/cards can easily be added
 
 class TabLink {
   constructor(tabElement) {
