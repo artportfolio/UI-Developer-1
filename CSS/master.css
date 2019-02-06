@@ -326,6 +326,11 @@ footer p {
 .CTA-foreground p {
   font-size: 4.75vw;
 }
+@media (min-width: 1000px) {
+  .CTA-foreground p {
+    font-size: 49px;
+  }
+}
 #CTA-btn {
   background-color: #40627c;
   color: #e8e595;
@@ -334,6 +339,7 @@ footer p {
   padding: 10px 20px;
   border-radius: 6px;
   margin: 1% 0;
+  padding: 1% 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,6 +351,11 @@ footer p {
 #CTA-btn:hover {
   background-color: #e8e595;
   color: #40627c;
+}
+@media (min-width: 1000px) {
+  #CTA-btn {
+    font-size: 53px;
+  }
 }
 h2 {
   align-self: left;

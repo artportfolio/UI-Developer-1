@@ -45,12 +45,16 @@
   color: @greyShade;
   p {
     font-size: 4.75vw;
+    @media @fullsize {
+      font-size: 49px;
+    }
   }
 }
 
 #CTA-btn {
   .button-styler(@blue, @yellow);
   margin: 1% 0;
+  padding: 1% 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +62,8 @@
   text-align: center;
   width: 45%;
   height: 33%;
-  @media @desktop {
+  @media @fullsize {
+    font-size: 53px;
   }
 }
 
