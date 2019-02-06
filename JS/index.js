@@ -1,3 +1,5 @@
+// JS for index.html
+
 // Color Reference (LESS variables don't function in JS)
 
 // @yellow: #e8e595;
