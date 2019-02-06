@@ -14,9 +14,26 @@
 // @greyTint: #527c85;
 // @greyShade: #080c0d;
 
+// Header logo hover behavior:
+
+const logoBtn = document.querySelector(".logo");
+const paletteYellow = document.querySelector(".palette-yellow");
+const paletteBlue = document.querySelector(".palette-blue");
+logoBtn.addEventListener("mouseover", () => {
+  logoBtn.style.backgroundColor = "#e8e595";
+  logoBtn.style.color = "#40627c";
+  paletteYellow.style.display = "none";
+  paletteBlue.style.display = "inline";
+});
+logoBtn.addEventListener("mouseleave", () => {
+  logoBtn.style.backgroundColor = "#40627c";
+  logoBtn.style.color = "#e8e595";
+  paletteYellow.style.display = "inline";
+  paletteBlue.style.display = "none";
+});
+
 // Slideshow
 // Component: Additional images can easily be added
-
 const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
 let slideImgActive = slideImgs[0];
 slideImgActive.classList.add("slide-img-active");
@@ -104,10 +121,6 @@ images[0].style.opacity = 1;
 
 // This past800 variable ensures that the < 800px and > 800px only triggers when the breakpoint is passed, and not every time the window is resized:
 let past800 = false;
-!window.matchMedia("(min-width: 800px)").matches
-  ? (past800 = false)
-  : (past800 = true);
-console.log(past800);
 
 window.addEventListener("resize", () => {
   // If the screen width < 800px (notice the "!"), applies appropriate styles to the stacked tabs/cards:
@@ -144,7 +157,8 @@ window.addEventListener("resize", () => {
       TweenMax.to(tab, 0, {
         backgroundColor: "#679ec7",
         color: "#fffca3",
-        borderBottom: "none"
+        borderBottom: "none",
+        top: "1px"
       });
     });
     cards.forEach(card => {
@@ -153,3 +167,6 @@ window.addEventListener("resize", () => {
     images.forEach(image => TweenMax.to(image, 0, { opacity: 1 }));
   }
 });
+
+// Since much of the features tabs/cards styling happens upon a resize event, the following triggers a resize event once upon loading the page. It's probably not ideal, but it works and it's in the spirit of DRY.
+window.dispatchEvent(new Event("resize"));

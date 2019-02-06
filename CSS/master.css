@@ -191,8 +191,8 @@ nav {
   display: flex;
   flex-direction: column;
 }
-#palette-yellow,
-#palette-blue {
+.palette-yellow,
+.palette-blue {
   position: relative;
   bottom: 1px;
   right: 1px;
@@ -200,7 +200,7 @@ nav {
   width: 32px;
   height: 32px;
 }
-#palette-blue {
+.palette-blue {
   display: none;
 }
 .logo {
@@ -209,33 +209,13 @@ nav {
   cursor: pointer;
   border: 1px solid #080c0d;
   border-radius: 6px;
-  background-color: white;
-  margin: 2.5px 0;
+  margin: 2.5px 2.5px 1.5px 0;
   font-size: 65px;
   padding: 10px 0 3px 17px;
   width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
-}
-.logo:hover {
-  background-color: #e8e595;
-  color: #40627c;
-}
-@media (min-width: 550px) {
-  .logo {
-    background-color: lightgrey;
-  }
-}
-@media (min-width: 800px) {
-  .logo {
-    background-color: grey;
-  }
-}
-@media (min-width: 1000px) {
-  .logo {
-    background-color: darkslategrey;
-  }
 }
 .nav-link {
   background-color: #40627c;
