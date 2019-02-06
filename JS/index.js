@@ -12,7 +12,27 @@
 // @greyTint: #527c85;
 // @greyShade: #080c0d;
 
-// Slideshow (placeholder)
+// Slideshow
+
+const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
+let slideImgActive = slideImgs[0];
+slideImgActive.classList.add("slide-img-active");
+const len = slideImgs.length - 1;
+let arrayLocation = 0;
+
+const slide = () => {
+  slideImgs.forEach(img => img.classList.remove("slide-img-active"));
+  if (arrayLocation === len) {
+    slideImgActive = slideImgs[0];
+    arrayLocation = 0;
+  } else {
+    slideImgActive = slideImgs[`${arrayLocation + 1}`];
+    arrayLocation += 1;
+  }
+  slideImgActive.classList.add("slide-img-active");
+};
+
+const autoSlideshow = setInterval(slide, 3000);
 
 // Features tabs/cards
 
