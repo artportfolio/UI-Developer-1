@@ -64,7 +64,8 @@ class TabLink {
         TweenMax.to(tab, 0, {
           backgroundColor: "#40627c",
           color: "#bdba79",
-          borderBottom: "1px solid #080c0d"
+          borderBottom: "1px solid #080c0d",
+          top: 0
         })
       );
       // GSAP: Hides previously active card and card image instantly
@@ -76,7 +77,8 @@ class TabLink {
       TweenMax.to(this.tabElement, 0, {
         backgroundColor: "#679ec7",
         color: "#fffca3",
-        borderBottom: "none"
+        borderBottom: "none",
+        top: "1px"
       });
       TweenMax.to(this.card, 0, { display: "block", opacity: 1 });
       // Fades in image on active tab
@@ -94,22 +96,30 @@ tabs.forEach(tabElement => new TabLink(tabElement));
 tabs[0].style.backgroundColor = "#679ec7";
 tabs[0].style.color = "#fffca3";
 tabs[0].style.borderBottom = "none";
+tabs[0].style.top = "1px";
 cards[0].style.display = "block";
 images[0].style.opacity = 1;
 
-// Since the features tabs/cards are styled differently at the 800px screen width breakpoint, this event listener checks for < 800px and > 800px when the window is resized:
-window.addEventListener("resize", () => {
-  console.log("resize");
-  // If the screen width < 800px (notice the "!"), applies appropriate styles to the stacked tabs/cards:
-  if (!window.matchMedia("(min-width: 800px)").matches) {
-    console.log("< 800px");
+// Since the features tabs/cards are styled differently at the 800px screen width breakpoint, this event listener checks for < 800px and > 800px when the window is resized
 
+// This past800 variable ensures that the < 800px and > 800px only triggers when the breakpoint is passed, and not every time the window is resized:
+let past800 = false;
+!window.matchMedia("(min-width: 800px)").matches
+  ? (past800 = false)
+  : (past800 = true);
+console.log(past800);
+
+window.addEventListener("resize", () => {
+  // If the screen width < 800px (notice the "!"), applies appropriate styles to the stacked tabs/cards:
+  if (!window.matchMedia("(min-width: 800px)").matches && past800 === true) {
+    past800 = false;
     // The following works for now, but reuses code from the TabLink class:
     tabs.forEach(tab =>
       TweenMax.to(tab, 0, {
         backgroundColor: "#40627c",
         color: "#bdba79",
-        borderBottom: "1px solid #080c0d"
+        borderBottom: "1px solid #080c0d",
+        top: 0
       })
     );
     cards.forEach(card =>
@@ -120,15 +130,16 @@ window.addEventListener("resize", () => {
     TweenMax.to(tabs[0], 0, {
       backgroundColor: "#679ec7",
       color: "#fffca3",
-      borderBottom: "none"
+      borderBottom: "none",
+      top: "1px"
     });
     TweenMax.to(cards[0], 0, { display: "block", opacity: 1 });
     TweenMax.to(images[0], 0, { opacity: 1 });
   }
 
   // If the screen width > 800px, applies appropriate styles to the separated tabs/cards:
-  if (window.matchMedia("(min-width: 800px)").matches) {
-    console.log("> 800px");
+  if (window.matchMedia("(min-width: 800px)").matches && past800 === false) {
+    past800 = true;
     tabs.forEach(tab => {
       TweenMax.to(tab, 0, {
         backgroundColor: "#679ec7",
