@@ -310,7 +310,7 @@ footer p {
   width: 90%;
   height: 21%;
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   right: 0;
   border-radius: 6px 0 0 6px;
   border: 1px solid #080c0d;
@@ -325,6 +325,7 @@ footer p {
 }
 .CTA-foreground p {
   font-size: 4.75vw;
+  text-align: left;
 }
 @media (min-width: 1000px) {
   .CTA-foreground p {
