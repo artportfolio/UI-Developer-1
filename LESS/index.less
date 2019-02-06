@@ -46,6 +46,7 @@
   p {
     font-size: 4.75vw;
     text-align: left;
+    // Stops width-based elements (vw units) from scaling past 1000px screensize
     @media @fullsize {
       font-size: 49px;
     }
@@ -55,14 +56,15 @@
 #CTA-btn {
   .button-styler(@blue, @yellow);
   margin: 1% 0;
-  padding: 1% 0 0 0;
+  padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5vw;
   text-align: center;
-  width: 45%;
+  width: 35%;
   height: 33%;
+  // Stops width-based elements (vw units) from scaling past 1000px screensize
   @media @fullsize {
     font-size: 53px;
   }
@@ -85,11 +87,20 @@ p {
 .features-tabs {
   display: flex;
   font-size: 1.6rem;
+  @media @desktop {
+    .flex-sb;
+  }
+}
+
+.tab-spacer {
+  position: relative;
+  top: 1px;
+  display: block;
 }
 
 .feature-tab {
   position: relative;
-  top: 1px;
+  //top: 1px;
   cursor: pointer;
   font-family: "Varela Round", sans-serif;
   background-color: @blue;
@@ -101,10 +112,33 @@ p {
   border-width: 1px 1px 0 1px;
   border-style: solid;
   border-color: @greyShade;
+
+  // :before {
+  //   display: block;
+  //   content: ".";
+  //   color: transparent;
+  //   font-size: 0;
+  //   border-bottom: 1px solid @yellow;
+  //   height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   padding: 1px 0;
+  //   top: -1px;
+  //   bottom: -1px;
+  // }
+
+  @media @desktop {
+    cursor: default;
+    background-color: @blueTint;
+    color: @yellowTint;
+  }
 }
 
 .features-cards {
   background-color: @blueShade;
+  @media @desktop {
+    .flex-sb;
+  }
 }
 
 .feature-card {
@@ -115,12 +149,19 @@ p {
   color: @yellow;
   // (2 of 2) Outlines tab and card together so they look like one object.
   border-radius: 0 6px 6px 6px;
-  border-width: 1px 1px 1px 1px;
+  border-width: 1px;
   border-style: solid;
   border-color: @greyShade;
+  @media @desktop {
+    display: block;
+    width: 33%;
+  }
 }
 
 .feature-image {
   // Allows for the fade-in effect of the active feature image
   opacity: 0;
+  @media @desktop {
+    opacity: 1;
+  }
 }
