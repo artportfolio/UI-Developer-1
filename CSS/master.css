@@ -300,6 +300,11 @@ footer p {
   border-radius: 6px 0 0 6px;
   border: 1px solid #080c0d;
 }
+@media (min-width: 550px) {
+  .CTA {
+    border-width: 2px;
+  }
+}
 .CTA-background {
   background-color: #fffca3;
   opacity: 0.85;
@@ -337,6 +342,11 @@ footer p {
   background-color: #e8e595;
   color: #40627c;
 }
+@media (min-width: 550px) {
+  #CTA-btn {
+    border-width: 2px;
+  }
+}
 @media (min-width: 1000px) {
   #CTA-btn {
     font-size: 53px;
@@ -364,7 +374,9 @@ p {
   }
 }
 .tab-spacer {
+  display: flex;
   position: relative;
+  width: 33%;
   top: 1px;
   display: block;
 }
@@ -377,12 +389,13 @@ p {
   padding: 8px 10px 6px 10px;
   margin: 5px 5px 0 0;
   border-radius: 6px 6px 0 0;
-  border-width: 1px 1px 0 1px;
+  border-width: 1px 1px 1px 1px;
   border-style: solid;
   border-color: #080c0d;
 }
 @media (min-width: 800px) {
   .feature-tab {
+    margin: 5px 0 0 0;
     cursor: default;
     background-color: #679ec7;
     color: #fffca3;
@@ -410,6 +423,7 @@ p {
 }
 @media (min-width: 800px) {
   .feature-card {
+    border-radius: 0 0 6px 6px;
     display: block;
     width: 33%;
   }

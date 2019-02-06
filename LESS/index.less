@@ -34,6 +34,9 @@
   right: 0;
   border-radius: 6px 0 0 6px;
   border: 1px solid @greyShade;
+  @media @tablet {
+    border-width: 2px;
+  }
 }
 
 .CTA-background {
@@ -64,6 +67,9 @@
   text-align: center;
   width: 35%;
   height: 33%;
+  @media @tablet {
+    border-width: 2px;
+  }
   // Stops width-based elements (vw units) from scaling past 1000px screensize
   @media @fullsize {
     font-size: 53px;
@@ -93,14 +99,15 @@ p {
 }
 
 .tab-spacer {
+  display: flex;
   position: relative;
+  width: 33%;
   top: 1px;
   display: block;
 }
 
 .feature-tab {
   position: relative;
-  //top: 1px;
   cursor: pointer;
   font-family: "Varela Round", sans-serif;
   background-color: @blue;
@@ -109,7 +116,7 @@ p {
   margin: 5px 5px 0 0;
   // (1 of 2) Outlines tab and card together so they look like one object.
   border-radius: 6px 6px 0 0;
-  border-width: 1px 1px 0 1px;
+  border-width: 1px 1px 1px 1px;
   border-style: solid;
   border-color: @greyShade;
 
@@ -128,6 +135,7 @@ p {
   // }
 
   @media @desktop {
+    margin: 5px 0 0 0;
     cursor: default;
     background-color: @blueTint;
     color: @yellowTint;
@@ -153,6 +161,7 @@ p {
   border-style: solid;
   border-color: @greyShade;
   @media @desktop {
+    border-radius: 0 0 6px 6px;
     display: block;
     width: 33%;
   }
