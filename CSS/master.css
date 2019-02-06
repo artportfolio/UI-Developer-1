@@ -185,46 +185,35 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .side-nav {
-  width: 33.3%;
+  width: 175px;
   display: flex;
   flex-direction: column;
 }
 #palette-yellow,
 #palette-blue {
   position: relative;
-  bottom: 3px;
+  bottom: 1px;
+  right: 1px;
   border: none;
-  width: 44px;
-  height: 44px;
-}
-@media (min-width: 550px) {
-  #palette-yellow,
-  #palette-blue {
-    width: 55px;
-    height: 55px;
-  }
+  width: 32px;
+  height: 32px;
 }
 #palette-blue {
   display: none;
-}
-#palette-blue :hover {
-  display: block;
 }
 .logo {
   background-color: #40627c;
   color: #e8e595;
   cursor: pointer;
   border: 1px solid #080c0d;
-  padding: 10px 20px;
   border-radius: 6px;
+  background-color: white;
   margin: 2.5px 0;
-  font-size: 15.5vmin;
-  padding-top: 16px;
-  padding-left: 20px;
-  width: 66.6%;
+  font-size: 65px;
+  padding: 10px 0 3px 17px;
+  width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -233,16 +222,19 @@ nav {
   background-color: #e8e595;
   color: #40627c;
 }
-.logo :hover #palette-yellow {
-  display: none;
-}
-.logo :hover #palette-blue {
-  display: block;
-}
 @media (min-width: 550px) {
   .logo {
-    padding: 10px 0 0 25px;
-    font-size: 8.5rem;
+    background-color: lightgrey;
+  }
+}
+@media (min-width: 800px) {
+  .logo {
+    background-color: grey;
+  }
+}
+@media (min-width: 1000px) {
+  .logo {
+    background-color: darkslategrey;
   }
 }
 .nav-link {
@@ -250,25 +242,18 @@ nav {
   color: #e8e595;
   cursor: pointer;
   border: 1px solid #080c0d;
-  padding: 10px 20px;
   border-radius: 6px;
   margin: 2.5px 0 2.5px 2%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3.6vmin;
+  font-size: 1.9rem;
+  padding-top: 3px;
   height: 50%;
-  text-align: center;
-  width: 98%;
 }
 .nav-link:hover {
   background-color: #e8e595;
   color: #40627c;
-}
-@media (min-width: 550px) {
-  .nav-link {
-    font-size: 2.15rem;
-  }
 }
 footer .footer {
   display: flex;
@@ -337,7 +322,6 @@ footer p {
   color: #e8e595;
   cursor: pointer;
   border: 1px solid #080c0d;
-  padding: 10px 20px;
   border-radius: 6px;
   margin: 1% 0;
   padding: 1% 0 0 0;
