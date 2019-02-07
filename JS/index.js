@@ -97,7 +97,7 @@ class TabLink {
         borderBottom: "none",
         top: "1px"
       });
-      TweenMax.to(this.card, 0, { display: "block", opacity: 1 });
+      TweenMax.to(this.card, 0, { display: "flex", opacity: 1 });
       // Fades in image on active tab
       TweenMax.to(this.image, 0.5, { opacity: 1 });
     }
@@ -114,7 +114,7 @@ tabs[0].style.backgroundColor = "#679ec7";
 tabs[0].style.color = "#fffca3";
 tabs[0].style.borderBottom = "none";
 tabs[0].style.top = "1px";
-cards[0].style.display = "block";
+cards[0].style.display = "flex";
 images[0].style.opacity = 1;
 
 // Since the features tabs/cards are styled differently at the 800px screen width breakpoint, this event listener checks for < 800px and > 800px when the window is resized
@@ -146,7 +146,7 @@ window.addEventListener("resize", () => {
       borderBottom: "none",
       top: "1px"
     });
-    TweenMax.to(cards[0], 0, { display: "block", opacity: 1 });
+    TweenMax.to(cards[0], 0, { display: "flex", opacity: 1 });
     TweenMax.to(images[0], 0, { opacity: 1 });
   }
 
@@ -162,7 +162,7 @@ window.addEventListener("resize", () => {
       });
     });
     cards.forEach(card => {
-      TweenMax.to(card, 0, { display: "block", opacity: 1 });
+      TweenMax.to(card, 0, { display: "flex", opacity: 1 });
     });
     images.forEach(image => TweenMax.to(image, 0, { opacity: 1 }));
   }
