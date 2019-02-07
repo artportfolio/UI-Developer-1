@@ -35,38 +35,16 @@ logoBtn.addEventListener("mouseleave", () => {
 // Slideshow
 // Component: Additional images can easily be added
 
-const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
-let slideIn = slideImgs[0];
-slideIn.classList.add("active");
-let slideImgsIndex = 0;
-
-const goToNextSlide = () => {
-  // Hides previous slide:
-  let slideOut = slideIn;
-  slideOut.classList.remove("active");
-  // Determines next slide:
-  if (slideImgsIndex === slideImgs.length - 1) {
-    slideIn = slideImgs[0];
-    slideImgsIndex = 0;
-  } else {
-    slideIn = slideImgs[`${slideImgsIndex + 1}`];
-    slideImgsIndex += 1;
-  }
-  // Reveals next slide:
-  slideIn.classList.add("active");
-};
-
-// Slideshow
-// Component: Additional images can easily be added
-
 // const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
 // let slideIn = slideImgs[0];
 // slideIn.classList.add("active");
 // let slideImgsIndex = 0;
 
 // const goToNextSlide = () => {
-//   var tl = new TimeLineLite();
+//   // Hides previous slide:
 //   let slideOut = slideIn;
+//   slideOut.classList.remove("active");
+//   // Determines next slide:
 //   if (slideImgsIndex === slideImgs.length - 1) {
 //     slideIn = slideImgs[0];
 //     slideImgsIndex = 0;
@@ -74,12 +52,42 @@ const goToNextSlide = () => {
 //     slideIn = slideImgs[`${slideImgsIndex + 1}`];
 //     slideImgsIndex += 1;
 //   }
-
-//   tl.set(slideIn, { y: "100%", autoAlpha: 1, className: "+=active" })
-//     .set(slideOut, { className: "-=active" })
-//     .to(slideOut, 0.5, { y: "-100%", ease: Power3.easeInOut }, 0)
-//     .to(slideIn, 0.5, { y: "-=100%", ease: Power3.easeInOut }, 0);
+//   // Reveals next slide:
+//   slideIn.classList.add("active");
 // };
+
+// Slideshow
+// Component: Additional images can easily be added
+
+const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
+TweenMax.set(slideImgs, { autoAlpha: 0 });
+let slideIn = slideImgs[0];
+slideIn.classList.add("active");
+TweenMax.set(slideIn, { autoAlpha: 1 });
+let slideImgsIndex = 0;
+
+const goToNextSlide = () => {
+  var tl = new TimelineLite();
+  let slideOut = slideIn;
+  if (slideImgsIndex === slideImgs.length - 1) {
+    slideIn = slideImgs[0];
+    slideImgsIndex = 0;
+  } else {
+    slideIn = slideImgs[`${slideImgsIndex + 1}`];
+    slideImgsIndex += 1;
+  }
+  console.log("Before tl:");
+  console.log(slideIn);
+  console.log(slideOut);
+
+  tl.set(slideIn, { y: "100%", autoAlpha: 1, className: "+=active" })
+    .set(slideOut, { className: "-=active" })
+    .to(slideOut, 0.5, { y: "-100%", ease: Power3.easeInOut }, 0)
+    .to(slideIn, 0.5, { y: "-=100%", ease: Power3.easeInOut }, 0);
+  console.log("After tl:");
+  console.log(slideIn);
+  console.log(slideOut);
+};
 
 // Start continuous slideshow:
 setInterval(goToNextSlide, 2500);
