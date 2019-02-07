@@ -269,13 +269,12 @@ footer p {
   align-items: center;
 }
 .slide-div {
-  display: block;
+  overflow: hidden;
 }
 .slide-img {
-  display: none;
-}
-.active {
-  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .CTA {
   width: 90%;
