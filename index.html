@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>artful - home</title>
     <link href="CSS/master.css" rel="stylesheet" />
-    <script defer="defer" src="./GSAP/TweenMax.min.js"></script>
-    <script defer src="JS/index.js"></script>
+    <script defer src="GSAP/TweenMax.min.js"></script>
+    <script defer src="GSAP/TimelineLite.min.js"></script>
+    <script defer src="GSAP/CSSPlugin.min.js"></script>
+    <script defer src="JS/master.js"></script>
   </head>
 
   <body>
@@ -43,23 +45,20 @@
             <a id="CTA-btn" href="https://gracious-montalcini-7641f5.netlify.com/">join artful</a>
           </div>
         </div>
-        <div class="features-container">
+        <div id="features-container" class="features-container">
           <div class="features-tabs">
             <div class="tab-spacer">
             <div data-tab="feature 1" class="feature-tab">
-              Feature 1
+              Explore...
             </div></div><div class="tab-spacer">
-            <div data-tab="feature 2" class="feature-tab">Feature 2</div></div><div class="tab-spacer">
-            <div data-tab="feature 3" class="feature-tab">Feature 3</div>
+            <div data-tab="feature 2" class="feature-tab">Exhibit...</div></div><div class="tab-spacer">
+            <div data-tab="feature 3" class="feature-tab">Expand...</div>
           </div></div>
           <div class="features-cards">
-            <div data-card="feature 1" class="feature-card">
+            <div data-card="feature 1" class="feature-card"><div class="feature-card-text">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae obcaecati iure architecto doloremque illo quae
-                impedit, corporis laboriosam mollitia porro? Accusamus atque in
-                eum soluta id, eaque consectetur? Provident, nihil?
-              </p>
+                ...the world of high art. Develop a collection of your favorites. Create a gallery based on a theme. Find new work by up-and-coming artists based on what you know and love. Strike out in an unexpected direction and find yourself somewhere new. All of this and more is waiting for you at <span> artful </span>.
+              </p></div>
               <div class="img-container">
                 <img
                   data-image="feature 1"
@@ -70,12 +69,10 @@
               </div>
             </div>
             <div data-card="feature 2" class="feature-card">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae obcaecati iure architecto doloremque illo quae
-                impedit, corporis laboriosam mollitia porro? Accusamus atque in
-                eum soluta id, eaque consectetur? Provident, nihil?
-              </p>
+              <div class="feature-card-text">
+                <p>
+                  ...your work. Create custom galleries to showcase your best pieces. Choose nearly any background color and add a few tasteful effects. For potters and sculptors, we will soon offer hosting for 3-D interactive models of your work. Stay on the cutting edge with <span>artful</span>.
+                </p></div>
               <div class="img-container">
                 <img
                   data-image="feature 2"
@@ -86,12 +83,10 @@
               </div>
             </div>
             <div data-card="feature 3" class="feature-card">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae obcaecati iure architecto doloremque illo quae
-                impedit, corporis laboriosam mollitia porro? Accusamus atque in
-                eum soluta id, eaque consectetur? Provident, nihil?
-              </p>
+              <div class="feature-card-text">
+                <p>
+                  ...your audience. Whether your fanbase is small and dedicated or large and rapidly growing, we can help you grow faster,better. Reach new people. Connect with those who already know and love you. Choose your next move. Try our suite of growth management tools at <span>artful</span>.
+                </p></div>
               <div class="img-container">
                 <img
                   data-image="feature 3"
@@ -105,7 +100,7 @@
         </div>
       </div>
       <footer> <div class="footer">
-        <p>Copyright © 2019 Artful. All rights reserved.</p></footer></div>
+        <p>Copyright © 2019 artful. All rights reserved.</p></footer></div>
     </div>
   </body>
 </html>
