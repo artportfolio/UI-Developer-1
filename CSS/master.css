@@ -178,8 +178,14 @@ header {
   margin: 0 auto;
   background-color: #26393d;
 }
+header {
+  background-color: #26393d;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
 .nav {
-  margin: 5px 0 2.5px 0;
+  padding: 5px 0;
   width: 100%;
 }
 nav {
