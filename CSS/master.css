@@ -274,7 +274,7 @@ footer p {
 .slide-img {
   display: none;
 }
-.slide-img-active {
+.active {
   display: block;
 }
 .CTA {

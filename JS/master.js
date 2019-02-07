@@ -1,4 +1,4 @@
-// JS for index.html
+// JS for index.html and about.html
 
 // Color Reference (LESS variables don't function in JS)
 
@@ -34,25 +34,55 @@ logoBtn.addEventListener("mouseleave", () => {
 
 // Slideshow
 // Component: Additional images can easily be added
-const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
-let slideImgActive = slideImgs[0];
-slideImgActive.classList.add("slide-img-active");
-const len = slideImgs.length - 1;
-let arrayLocation = 0;
 
-const slide = () => {
-  slideImgs.forEach(img => img.classList.remove("slide-img-active"));
-  if (arrayLocation === len) {
-    slideImgActive = slideImgs[0];
-    arrayLocation = 0;
+const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
+let slideIn = slideImgs[0];
+slideIn.classList.add("active");
+let slideImgsIndex = 0;
+
+const goToNextSlide = () => {
+  // Hides previous slide:
+  let slideOut = slideIn;
+  slideOut.classList.remove("active");
+  // Determines next slide:
+  if (slideImgsIndex === slideImgs.length - 1) {
+    slideIn = slideImgs[0];
+    slideImgsIndex = 0;
   } else {
-    slideImgActive = slideImgs[`${arrayLocation + 1}`];
-    arrayLocation += 1;
+    slideIn = slideImgs[`${slideImgsIndex + 1}`];
+    slideImgsIndex += 1;
   }
-  slideImgActive.classList.add("slide-img-active");
+  // Reveals next slide:
+  slideIn.classList.add("active");
 };
 
-const autoSlideshow = setInterval(slide, 2500);
+// Slideshow
+// Component: Additional images can easily be added
+
+// const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
+// let slideIn = slideImgs[0];
+// slideIn.classList.add("active");
+// let slideImgsIndex = 0;
+
+// const goToNextSlide = () => {
+//   var tl = new TimeLineLite();
+//   let slideOut = slideIn;
+//   if (slideImgsIndex === slideImgs.length - 1) {
+//     slideIn = slideImgs[0];
+//     slideImgsIndex = 0;
+//   } else {
+//     slideIn = slideImgs[`${slideImgsIndex + 1}`];
+//     slideImgsIndex += 1;
+//   }
+
+//   tl.set(slideIn, { y: "100%", autoAlpha: 1, className: "+=active" })
+//     .set(slideOut, { className: "-=active" })
+//     .to(slideOut, 0.5, { y: "-100%", ease: Power3.easeInOut }, 0)
+//     .to(slideIn, 0.5, { y: "-=100%", ease: Power3.easeInOut }, 0);
+// };
+
+// Start continuous slideshow:
+setInterval(goToNextSlide, 2500);
 
 // Features tabs/cards
 // Component: additional feature tabs/cards can easily be added
