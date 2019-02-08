@@ -15,7 +15,6 @@
 // @greyShade: #080c0d;
 
 // Header logo hover behavior:
-
 const logoBtn = document.querySelector(".logo");
 const paletteYellow = document.querySelector(".palette-yellow");
 const paletteBlue = document.querySelector(".palette-blue");
