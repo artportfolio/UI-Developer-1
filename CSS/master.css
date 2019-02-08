@@ -414,8 +414,7 @@ p {
   margin: 3px 3px 5px 3px;
 }
 .feature-card .feature-card-text span {
-  color: #263b4a;
-  font-size: 1.7rem;
+  color: #fffca3;
 }
 @media (min-width: 800px) {
   .feature-card {

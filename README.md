@@ -24,7 +24,7 @@
 
 - Scales seamlessly from mobile to desktop sizes, and any size between them
 - Simple automatic slideshow quickly suggests several product use cases to potential customers
-- Slides can be added or removed out easily (see below)
+- Slides can be added or removed easily (see below)
 - Three different buttons encourage the audience to find their way to the signup/login page
 - Features cards stack at lower screen widths and separate at higher screen widths
 - About Us page includes each team member's name and role, and a link to their GitHub page
@@ -41,14 +41,15 @@ The JS for the slideshow generates an array of images from the HTML upon page lo
 
 ### Features Cards
 
-The features cards are a sort of semi-component. It wouldn’t be that difficult to edit the HTML to refer to more features of the product. However, there is so little width at the mobile level that adding even one new feature card could cause side effects.
+The features cards are a sort of semi-component. It wouldn’t be that difficult to edit the HTML to refer to more features of the product. However, there is so little width at the mobile level that adding even one new feature card would be difficult due to horizontal space.
 
 ### Color Scheme
 
-Variables are used throughout the LESS files to refer to the color scheme, making this portion of a color adjustment fairly simple. However, JS does not have access those color variables, and must rely instead on hex codes to apply color. Therefore, editing the site colors would require editing one or more LESS files _as well as_ the index.js.
+Variables are used throughout the LESS files to refer to the color scheme, making this portion of a color adjustment fairly simple. However, JS does not have access those color variables, and must rely instead on hex codes to apply color. Therefore, editing the site colors would require editing index.js _as well as_ one or more LESS files.
 
 ## Known Issues
 
 - Some styles are applied on page load by JS. If the user’s connection is slow, there is a chance of them seeing the site without all styling applied.
-- While the site scales well, it doesn’t look great at all screen widths. The tablet view (min-width: 550ps) in particular could use a redesign to display more of the important information on screen
+- While the site scales well, it doesn’t look great at all screen widths. The tablet view (550-800px) in particular could use a redesign to ensure that more of the important information stays on-screen.
 - Feature cards and colors are not as easy to change as they could be.
+- The 'position: sticky' applied to make the header always visible is not supported in the current iOS versions of Chrome or Safari.
