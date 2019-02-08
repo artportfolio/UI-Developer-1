@@ -273,6 +273,7 @@ footer p {
 }
 .slide-img {
   display: none;
+  opacity: 0;
 }
 .active {
   display: block;
@@ -296,7 +297,7 @@ footer p {
   opacity: 0.85;
 }
 .CTA-foreground {
-  padding: 1.5% 0 1% 2%;
+  padding: 1.5% 2% 1% 2%;
   color: #080c0d;
 }
 .CTA-foreground p {
