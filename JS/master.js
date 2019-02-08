@@ -36,14 +36,23 @@ logoBtn.addEventListener("mouseleave", () => {
 // Component: Additional images can easily be added
 
 const slideImgs = Array.from(document.querySelectorAll(".slide-img"));
+// Sets all slide images to invisible:
+slideImgs.forEach(image => {
+  TweenMax.set(image, { autoAlpha: 0 });
+});
+// Sets first image in slideImgs array to be the visible image...
 let slideIn = slideImgs[0];
-slideIn.classList.add("active");
+// ...and then makes that image visible:
+TweenMax.set(slideIn, { autoAlpha: 1 });
+// Keeps track of the index of the active slide:
 let slideImgsIndex = 0;
 
 const goToNextSlide = () => {
-  // Hides previous slide:
+  var tl = new TimelineLite();
   let slideOut = slideIn;
-  slideOut.classList.remove("active");
+  // Determines slide direction:
+  let slideDir = slideImgsIndex % 2;
+
   // Determines next slide:
   if (slideImgsIndex === slideImgs.length - 1) {
     slideIn = slideImgs[0];
@@ -52,8 +61,26 @@ const goToNextSlide = () => {
     slideIn = slideImgs[`${slideImgsIndex + 1}`];
     slideImgsIndex += 1;
   }
+
   // Reveals next slide:
-  slideIn.classList.add("active");
+
+  // Keeps track of whether the index is even or odd in order to change the animation direction:
+
+  if (slideDir === 0) {
+    tl
+      // move the new slide (the one about to enter viewport) out of the viewport and add class active
+      .set(slideIn, { y: "100%", autoAlpha: 1 })
+      // animate active slide up (out of the viewport)
+      .to(slideOut, 0.5, { y: "-100%", ease: Power3.easeInOut }, 0)
+      // animate new slide up (from out of the viewport)
+      .to(slideIn, 0.5, { y: "-=100%", ease: Power3.easeInOut }, 0);
+  } else {
+    tl.set(slideIn, { x: "-100%", autoAlpha: 1 })
+      // animate active slide up (out of the viewport)
+      .to(slideOut, 0.5, { x: "100%", ease: Power3.easeInOut }, 0)
+      // animate new slide up (from out of the viewport)
+      .to(slideIn, 0.5, { x: "+=100%", ease: Power3.easeInOut }, 0);
+  }
 };
 
 // Start continuous slideshow:

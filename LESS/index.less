@@ -15,15 +15,18 @@
 }
 
 .slide-div {
-  display: block;
+  overflow: hidden;
+  display: relative;
+  width: 97vw;
+  height: 141vw;
+  @media @fullsize {
+    width: 1000px;
+    height: 1500px;
+  }
 }
 
 .slide-img {
-  display: none;
-}
-
-.active {
-  display: block;
+  position: absolute;
 }
 
 .CTA {
